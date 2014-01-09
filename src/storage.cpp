@@ -1,9 +1,13 @@
 /**
- * EEPROM Functions
- * ~~~~~~~~~~~~~~~~~
+ * storage.cpp 
+ * ~~~~~~~~~~~~
+ * Functions for storing the data collected by our rover using EEPROM.
  *
+ * Kent Ma
+ * Block Y
  */
 #include <Arduino.h>
+#include "storage.h"
 
 /*
  * Writes the data collected to the EEPROM
@@ -87,7 +91,7 @@ void print_data(void)
 void detect_serial(void) 
 {
     if (EEPROM_ENABLED && Serial) {
-        lcd.clear();
+        lcd.setCursor(0, 0);
         lcd.print("Detected Serial:");
         lcd.setCursor(0, 1);
         lcd.print("Writing data...");

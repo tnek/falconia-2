@@ -3,6 +3,14 @@
  * ~~~~~~~~~~~~~~~~
  */
 #include <Arduino.h>
+#include "rover.h"
+
+/*
+ * LCD Pins
+ *    Digital Pins 2, 4, 6, 7, 10
+ *    Analog Pins 2 (Digital 16), 3 (Digital 17)
+ */
+LiquidCrystal lcd(2, 4, 6, 7, 10, 16, 17);
 
 /*
  * The first 10 or so seconds of using the sensors returns inaccurate values as

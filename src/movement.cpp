@@ -3,6 +3,7 @@
  * ~~~~~~~~~~~~~~~~~~~
  */
 #include <Arduino.h>
+#include "movement.h"
 
 /*
  * Self-explanatory functions for moving the rover

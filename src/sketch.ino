@@ -7,5 +7,8 @@
  *  Kent Ma, Alex Ives, Angela Zhou
  *  Block Y
  */
-
+#pragma once
+#ifndef SKETCH_H
+#define SKETCH_H
 #include "rover.h"
+#endif
