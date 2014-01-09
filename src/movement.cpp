@@ -1,9 +1,24 @@
 /** 
- * Movement Functions
- * ~~~~~~~~~~~~~~~~~~~
+ * movement.cpp
+ * ~~~~~~~~~~~~~
+ * Functions for the driving of the rover.
+ *
+ * Kent Ma
+ * Block Y
  */
 #include <Arduino.h>
 #include "movement.h"
+
+/* 
+ * Sets up the motors 
+ */
+void movement_init(void)
+{
+    pinMode(PWM_RM, OUTPUT);
+    pinMode(DIR_RM, OUTPUT);
+    pinMode(PWM_LM, OUTPUT);
+    pinMode(DIR_LM, OUTPUT);
+}
 
 /*
  * Self-explanatory functions for moving the rover
@@ -48,6 +63,9 @@ void stahp(void)
     analogWrite(PWM_LM, 0);
 }
 
+/*
+ * The hardcoded path for travelling through Falconia.
+ */
 void path(void)
 {
     go();
@@ -65,12 +83,4 @@ void path(void)
     delay(10000);
     
     stahp();
-}
-
-void movement_init(void)
-{
-    pinMode(PWM_RM, OUTPUT);
-    pinMode(DIR_RM, OUTPUT);
-    pinMode(PWM_LM, OUTPUT);
-    pinMode(DIR_LM, OUTPUT);
 }

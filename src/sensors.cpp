@@ -1,11 +1,27 @@
 /**
- * Sensor Functions
- * ~~~~~~~~~~~~~~~~~
+ * sensors.cpp
+ * ~~~~~~~~~~
+ * Functions for handling the sensors
+ *
+ * Kent Ma
+ * Block Y
  */
 #include <Arduino.h>
 #include "sensors.h"
 
 DHT22 dht(DHT_PIN);
+
+/*
+ * Sets up the pins for the sensors.
+ */
+void sensors_init(void)
+{
+    pinMode(DISTANCE_PIN, INPUT);
+    Servo moist_arm;
+    pinMode(MOIST_RPIN, INPUT);
+    moist_arm.attach(MOIST_APIN);
+}
+
 /*
  * Reads the humidity from the DHT Humidty Sensor.
  * However, it can only be called once every 2 seconds by the nature of the 
@@ -122,14 +138,6 @@ void print_moisture(int moisture)
     lcd.print(moisture);
 }
 
-
-
-/**
- *
- * Operational Functions
- * ~~~~~~~~~~~~~~~~~~~~~~
- */
-
 /*
  * Operates all of the sensors, and writes them to the LCD screen.
  */
@@ -148,12 +156,4 @@ void sensors(void)
             }
         }
     }
-}
-
-void sensors_init(void)
-{
-    pinMode(DISTANCE_PIN, INPUT);
-    Servo moist_arm;
-    pinMode(MOIST_RPIN, INPUT);
-    moist_arm.attach(MOIST_APIN);
 }

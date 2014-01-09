@@ -88,6 +88,12 @@ void print_data(void)
     
 }
 
+/* 
+ * Checks if the Serial monitor is present.
+ * If the Serial Monitor is detected, the rover will dump all of the data on the
+ * EEPROM to Serial.
+ */
+
 void detect_serial(void) 
 {
     if (EEPROM_ENABLED && Serial) {

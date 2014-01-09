@@ -1,6 +1,11 @@
 /*
- * Setup Functions
- * ~~~~~~~~~~~~~~~~
+ * rover.cpp 
+ * ~~~~~~~~~~
+ * A rover for collecting data of humidity of the area, as well as testing the
+ * moisture of soil in the area.
+ *
+ *  Kent Ma
+ *  Block Y
  */
 #include <Arduino.h>
 #include "rover.h"
@@ -50,10 +55,6 @@ void setup()
         calibrate_countdown();
     }
 
-    /* 
-     * If the Serial Monitor is detected, the rover, instead of starting, will
-     * instead dump all of the data on the EEPROM to Serial.
-     */
     detect_serial();
     path();
 } 

@@ -6,6 +6,13 @@
      * when actually running the rover.
      */
     #define COUNTDOWN_ENABLED 1
+
+    /*
+     * Switch to enable EEPROM.
+     * As there is a write limit for the EEPROM, this can be disabled for
+     * testing to preserve the life of the arduino, but should be enabled on a
+     * legitimate run.
+     */
     #define EEPROM_ENABLED 1
    
 #endif
