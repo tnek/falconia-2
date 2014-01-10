@@ -13,6 +13,6 @@
      * testing to preserve the life of the arduino, but should be enabled on a
      * legitimate run.
      */
-    #define EEPROM_ENABLED 1
+    #define EEPROM_ENABLED 0
    
 #endif

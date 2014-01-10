@@ -49,13 +49,13 @@ void setup()
 {
     Serial.begin(9600);
     lcd.begin(16, 2);
+    detect_serial();
     movement_init();
     sensors_init();
     if (COUNTDOWN_ENABLED) {
         calibrate_countdown();
     }
 
-    detect_serial();
     path();
 } 
 

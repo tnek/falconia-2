@@ -36,7 +36,7 @@
     /* 
      * Turn value for roughly 90 degrees 
      */
-    #define TURN_VAL 1000
+    #define TURN_VAL 850
     
     void forward(void);
     void back(void);
@@ -45,5 +45,6 @@
     void go(void);
     void path(void);
     void movement_init(void);
+    extern void sensors(void);
     
 #endif

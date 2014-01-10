@@ -8,5 +8,5 @@
     void store(float humidity, int moisture);
     double* fetch_packet(void);
     void print_data(void);
-    void detect_serial(void);
+    int detect_serial(void);
 #endif

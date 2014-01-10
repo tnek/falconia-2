@@ -94,7 +94,7 @@ void print_data(void)
  * EEPROM to Serial.
  */
 
-void detect_serial(void) 
+int detect_serial(void) 
 {
     if (EEPROM_ENABLED && Serial) {
         lcd.setCursor(0, 0);
@@ -102,5 +102,7 @@ void detect_serial(void)
         lcd.setCursor(0, 1);
         lcd.print("Writing data...");
         print_data();
+        return 1;
     }
+    return 0;
 }

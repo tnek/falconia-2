@@ -70,17 +70,28 @@ void path(void)
 {
     go();
     forward();
-    delay(10000);
-    
-    turn_right();
+    delay(8250);
+    stahp();
+    sensors();
+    delay(1000);
+
+    go();
+    turn_left();
     delay(TURN_VAL);
     forward();
-    delay(5000);
-    
-    turn_right();
+    delay(6000);
+    stahp();
+    sensors();
+    delay(1000);
+
+    go();
+    turn_left();
     delay(TURN_VAL);
     forward();
-    delay(10000);
-    
+    delay(8000);
+    stahp();
+    sensors();
+    delay(1000);
+
     stahp();
 }
