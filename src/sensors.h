@@ -30,9 +30,10 @@
     
     /*
      * Distance Sensor - LV MaxSonar-EZ
-     *    Digital 5 is the pin used.
+     *     Digital n is the pin used.
+     * Disabled for now: it is likely that this won't be needed.
      */
-    #define DISTANCE_PIN 5
+    //#define DISTANCE_PIN 5
     
     float humidity(void);
     int moisture(void);

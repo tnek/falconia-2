@@ -16,7 +16,7 @@ DHT22 dht(DHT_PIN);
  */
 void sensors_init(void)
 {
-    pinMode(DISTANCE_PIN, INPUT);
+//    pinMode(DISTANCE_PIN, INPUT);
     Servo moist_arm;
     pinMode(MOIST_RPIN, INPUT);
     moist_arm.attach(MOIST_APIN);
